@@ -1,0 +1,15 @@
+public int[] PlusOne(int[] digits) 
+{
+    for (int i = digits.Length - 1; i >= 0; i--) 
+    {
+        if (digits[i] < 9) 
+        {
+            digits[i]++; // Sadece 1 eklenir.
+            return digits;
+        }
+        digits[i] = 0; // Son satırı 0 yap.
+    }
+    int[] newDigits = new int[digits.Length + 1];
+    newDigits[0] = 1; // ilk basamak 1, gerisi 0
+    return newDigits;
+}
